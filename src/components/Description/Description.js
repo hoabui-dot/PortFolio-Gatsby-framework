@@ -24,7 +24,9 @@ const Description = () => {
             <a href="https://drive.google.com/file/d/1Fzh_m7zsU1WxCrpifAV7-Xavb9mjbnG8/view?usp=sharing">
               download cv
             </a>
-            <a href="#">contact me</a>
+            <a href="https://drive.google.com/file/d/1Fzh_m7zsU1WxCrpifAV7-Xavb9mjbnG8/view?usp=sharing">
+              contact me
+            </a>
           </div>
         </div>
       </div>

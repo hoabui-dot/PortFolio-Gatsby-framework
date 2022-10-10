@@ -3,13 +3,11 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const BlogItem = ({ data, flip }) => {
-  // const { image, fieldWork, jobName, work, workTitle, workDescription } = data
   const { carrer, description, image, job, title, work } = data
   return (
     <div className={`blog__item ${flip}`}>
       <div className="item__image">
         <figure>
-          {/* <img src={image} alt="Blog Images" /> */}
           <Img fluid={image.childImageSharp.fluid} />
           <div className="image__infos">
             <div className="user">

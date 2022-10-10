@@ -74,7 +74,7 @@ const Banner = () => {
           </Link>
         </div>
 
-        <div id="menuToggle" onClick={handleOpenMenu} className="">
+        <button id="menuToggle" onClick={handleOpenMenu} className="">
           <div className="toggle__normal">
             <i className={`top__bar ${toggleMenu ? "top__transform" : ""}`}>
               &#8212;
@@ -90,7 +90,7 @@ const Banner = () => {
               &#8212;
             </i>
           </div>
-        </div>
+        </button>
       </nav>
       <Card />
       <div className="header__background">

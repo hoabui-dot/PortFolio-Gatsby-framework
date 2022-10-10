@@ -9,22 +9,14 @@ const MoreInfo = ({ setState, state }) => {
     }
   }
 
-  const handleCloseClick = () => {
-    document.body.style.overflow = "unset"
-    setState(false)
-  }
-
   return (
-    <div
+    <button
       onClick={handleClick}
       id="id01"
       className={state ? "modal active" : "modal"}
     >
       <div className="modal__content">
         <div className="more__content">
-          <div onClick={handleCloseClick} className="more__close">
-            <i className="fa fa-close"></i>
-          </div>
           <h4 className="more__title">graduation at ashton uni</h4>
           <p className="more__time">Jan 2014 - Mar 2015</p>
           <figure>{/* <img src={Image} alt="More Info" /> */}</figure>
@@ -47,7 +39,7 @@ const MoreInfo = ({ setState, state }) => {
           </p>
         </div>
       </div>
-    </div>
+    </button>
   )
 }
 

@@ -100,7 +100,7 @@ const Card = () => {
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
-              <a href="#" className="icon__wf">
+              <a href="https://contacts.google.com/?hl=vi" className="icon__wf">
                 &#9850;
               </a>
             </div>
