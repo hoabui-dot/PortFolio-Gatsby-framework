@@ -1,0 +1,97 @@
+@import "../../App.scss";
+@import "../../index.scss";
+
+.skills {
+    &__wrap {
+        width: 100%;
+        background-color: var(--main-color);
+        color: white;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        padding-top: 55px;
+        padding-bottom: 65px;
+
+        @include md {
+            flex-direction: column;
+        }
+
+        div {
+            &:not(:first-child) {
+                margin-left: 30px;
+
+                @include md {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    .field {
+        width: 277px;
+
+        @include desktop__big {
+            width: 195px;
+        }
+
+        @include md {
+            width: 100%;
+            padding: 0 40px;
+
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+        }
+
+        &__title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            text-transform: capitalize;
+        }
+
+        &__list {
+            list-style-type: none;
+
+            li:not(:first-child) {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .item {
+        &__subTitle {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            font-weight: normal;
+            font-size: 14px;
+
+            .subTitle__percent {
+                font-size: 14px;
+                font-family: "mulish";
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                top: 24px;
+                height: 4px;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &__percent {
+            position: absolute;
+            height: 4px;
+            top: 24px;
+            left: -29px;
+            background-color: #fff;
+
+            @include md {
+                left: 0;
+            }
+        }
+    }
+}

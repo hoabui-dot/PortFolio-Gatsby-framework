@@ -1,0 +1,29 @@
+@import "../../index.scss";
+@import "../../App.scss";
+
+.title {
+    margin-top: 68px;
+    text-align: center;
+    font-size: 32px;
+    color: $dark;
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            color: #1abc9c;
+            padding: 13px;
+            @extend .box__shadow;
+            margin-bottom: 30px;
+        }
+
+        span {
+            font-weight: bolder;
+            margin-left: 10px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+    }
+}

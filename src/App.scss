@@ -1,0 +1,148 @@
+@import "./assets/scss/mixin.scss";
+
+$background: #f5f5f5;
+$green: #06a763;
+$darkgreen: #038175;
+$blue: #1976d2;
+$purple: #5f1a89;
+$brown: #5d4037;
+$red: #e73a2e;
+$pink: #d81b60;
+$grey: #f5f5f5;
+$dark: #616161;
+$fb: #3f51b5;
+$twitter: #2196f3;
+$google: #f44336;
+$linkedin: #1565c0;
+$wifi: #ef6c00;
+$greenLight: #95d6bb;
+$words: #757575;
+
+// @include font-face(raleway, Raleway-VariableFont, normal);
+// @include font-face(raleway__bold, Raleway-Medium, normal);
+// @include font-face(raleway__semiBold, Raleway-SemiBold, normal);
+// @include font-face(mulish, Mulish-VariableFont, normal);
+
+.box__shadow {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#body {
+    font-family: 'raleway', serif;
+    background-color: $background;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    font-family: 'raleway';
+
+    @include desktop__big {
+        max-width: 720px;
+    }
+
+    @include md {
+        padding: 0 15px;
+    }
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boxShadow {
+    box-shadow: rgb(0 0 0 / 16%) 0px 2px 5px 0px, rgb(0 0 0 / 12%) 0px 2px 10px 0px;
+}
+
+.header__background {
+    width: 100%;
+    height: 370px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@keyframes fadeUpBanner {
+    0% {
+        transform: translateX(-30px) scale(0.7);
+    }
+
+    100% {
+        transform: translate(0, 50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(60px) scale(0.7);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+        opacity: 1;
+    }
+}
+
+.fadeUp {
+    animation-name: fadeUp;
+    -webkit-animation-name: fadeUp;
+}
+
+.blue {
+    --main-color: #1f5694;
+    --secondary-color: #ff5722;
+}
+
+.brown {
+    --main-color: #5d4037;
+    --secondary-color: #3f51b5;
+}
+
+.gray {
+    --main-color: #616161;
+    --secondary-color: #f44336;
+}
+
+.green {
+    --main-color: #06a763;
+    --secondary-color: #1976d2;
+}
+
+.pink {
+    --main-color: #d81b60;
+    --secondary-color: #9c27b0;
+}
+
+.purple {
+    --main-color: #5f1a89;
+    --secondary-color: #e61f63;
+}
+
+.red {
+    --main-color: #e73a2e;
+    --secondary-color: #ff8f00;
+}
+
+.teal {
+    --main-color: #038175;
+    --secondary-color: #9c27b0;
+}
+
+.white {
+    --main-color: #06a763;
+    --secondary-color: #1976d2;
+}

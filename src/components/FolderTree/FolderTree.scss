@@ -1,0 +1,61 @@
+@import "../../App.scss";
+@import "../../index.scss";
+
+.folderTree {
+    position: relative;
+    margin-top: 30px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tree {
+        position: absolute;
+        top: 50px;
+        left: 482px;
+        width: 5px;
+        background-color: var(--main-color);
+        opacity: 0.4;
+
+        @include desktop__big {
+            left: 354px;
+        }
+
+        @include md {
+            left: 50%;
+        }
+
+        &--exp {
+            height: 350px;
+            top: unset;
+            margin-top: 30px;
+
+            @include desktop__big {
+                height: 450px;
+            }
+
+            @include md {
+                height: 600px;
+            }
+        }
+
+        &--edu {
+            height: 600px;
+
+            @include desktop__big {
+                height: 800px;
+            }
+
+            @include md {
+                height: 1000px;
+            }
+        }
+    }
+}
+
+.btn__more {
+    cursor: pointer;
+    font-size: 22px;
+    color: #19762d;
+}

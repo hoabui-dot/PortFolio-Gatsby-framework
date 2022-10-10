@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@mixin clear {
+    *zoom: 1;
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+@mixin md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin custom__value($breakpoint3) {
+    @media screen and (max-width: #{$breakpoint3}) {
+        @content;
+    }
+}
+
+// breakpoint
+@mixin sp {
+    @media screen and (max-width: #{$breakpoint1}) {
+        @content;
+    }
+}
+
+@mixin custom__sp {
+    @media screen and (max-width: #{$breakpoint2}) {
+        @content;
+    }
+}
+
+@mixin sp-special {
+    @media screen and (min-width: 415px) {
+        @content;
+    }
+}
+
+@mixin desktop-small {
+    @media screen and (max-width: 1600px) and (min-width: 415px) {
+        @content;
+    }
+}
+
+@mixin desktop-md {
+    @media (max-width: 1240px) and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin pc-md {
+    @media (max-width: 1160px) and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin sm-tab {
+    @media (min-width: 450px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin big-screen {
+    @media (min-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin desktop__big {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+//border-top
+//ex: @include bor-top(1px, #000);
+@mixin bor-top($width, $color) {
+    border-top: $width solid $color;
+}
+
+@mixin fontStyle($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+//border-bottom
+@mixin bor-bottom($width, $color) {
+    border-bottom: $width solid $color;
+}
+
+//border
+@mixin bor($width, $color) {
+    border: $width solid $color;
+}
+
+//box-sizing
+//ex: @include bor-siz;
+@mixin box-siz {
+    box-sizing: border-box;
+}
+
+//width 100% and max-width
+@mixin w-auto($value) {
+    width: 100%;
+    max-width: $value;
+}
+
+//Animated
+@mixin animated {
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+// Flex which can have choose justify-content and align-items
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//limiting of word
+@mixin word-limit($value) {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: $value;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+}
+
+// @mixin font-face($fontFamilyName, $fontName, $fontWeight) {
+//     @font-face {
+//         font-family: "#{$fontFamilyName}";
+//         src: url("../fonts/#{$fontName}.ttf") format("openType"), url("../fonts/#{$fontName}.woff") format("woff"),
+//             url("../fonts/#{$fontName}.woff2") format("woff2");
+//         @if $fontWeight == normal {
+//             font-weight: normal;
+//             font-style: normal;
+//         }
+//     }
+// }

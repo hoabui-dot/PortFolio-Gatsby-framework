@@ -1,0 +1,178 @@
+@import "../../../App.scss";
+
+.eduBox {
+    &__item {
+        position: relative;
+        display: inline-block;
+        list-style-type: none;
+        z-index: 1;
+
+        &:not(:first-child) {
+            margin-top: -75px;
+
+            @include md {
+                margin-top: 15px;
+            }
+        }
+
+        .item__content {
+            position: relative;
+            display: inline-block;
+        }
+
+        .item__key {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            top: 2px;
+            right: -90px;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 900;
+            border-radius: 50%;
+            background-color: var(--main-color);
+            color: white;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 29%);
+
+            i {
+                font-size: 22px;
+            }
+
+            @include desktop__big {
+                right: -67px;
+            }
+
+            @include md {
+                right: 1.5%;
+                top: 2%;
+            }
+        }
+    }
+
+    &__flip {
+        list-style-type: none;
+        transform: scale(-1);
+        z-index: 0;
+
+        .item__key {
+            right: unset;
+            left: -90px;
+
+            @include desktop__big {
+                left: -73px;
+            }
+
+            @include md {
+                right: 1.5%;
+                top: 2%;
+                left: unset;
+            }
+        }
+
+        .item__content {
+            transform: scale(-1);
+        }
+
+        .eduBox__job {
+            padding-right: 15px;
+
+            &::after {
+                right: unset;
+                left: -45px;
+                width: 40px;
+
+                @include desktop__big {
+                    width: 25px;
+                    left: -30px;
+                }
+
+                @include md {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__job {
+        color: $dark;
+        width: 420px;
+        background-color: #fff;
+        padding: 28px 0 22px 20px;
+        letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 30px;
+        border-left: 5px solid var(--secondary-color);
+        @extend .box__shadow;
+
+        @include desktop__big {
+            width: 315px;
+        }
+
+        @include md {
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: var(--main-color);
+            opacity: 0.4;
+            width: 40px;
+            height: 4px;
+            top: 25px;
+            right: -40px;
+
+            @include desktop__big {
+                width: 22px;
+                right: -22px;
+            }
+
+            @include md {
+                display: none;
+            }
+        }
+
+        .job {
+            &__name {
+                font-weight: 900;
+                font-size: 20px;
+
+                @include md {
+                    padding-right: 50px;
+                }
+            }
+
+            &__subTitle {
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+            &__time {
+                font-weight: 600;
+            }
+
+            &__desc {
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
+
+.item__more {
+    cursor: pointer;
+    display: none;
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-size: 18px;
+    color: var(--secondary-color);
+}
+
+.block {
+    display: block;
+}

@@ -1,0 +1,65 @@
+@import '../../App.scss';
+@import '../../index.scss';
+
+.description {
+    &__wrap {
+        margin-top: 53px;
+        background-color: #fff;
+    }
+
+    &__content {
+        padding: 40px;
+        color: $dark;
+        font-size: 15px;
+        text-align: center;
+        line-height: 22px;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #eee;
+        padding: 25px 0;
+
+        @include sp {
+            flex-direction: column;
+        }
+
+        a {
+            cursor: pointer;
+            border: none;
+            background: var(--main-color);
+            width: 180px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            padding: 10px 0;
+            text-decoration: none;
+            border-radius: 2px;
+            border: none;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+
+            &:hover {
+                transition: 0.5 ease-in-out;
+                box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%) !important;
+            }
+
+            &:not(:first-child) {
+                margin-left: 17px;
+
+                @include sp {
+                    margin-left: 0;
+                    margin-top: 15px;
+                }
+            }
+
+            &:active {
+                box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+@import '../../App.scss';
+@import '../../index.scss';
+
+.blog {
+    @extend .box__shadow;
+
+    &__wrap {
+        background-color: #fff;
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include md {
+            grid-template-columns: 1fr;
+        }
+
+        .item__image {
+            font-family: 'mulish';
+            position: relative;
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.05);
+            }
+
+            figure {
+                height: 100%;
+
+                @include md {
+                    max-height: 300px;
+                }
+
+                img {
+                    transition: 0.3s ease-in-out;
+                }
+
+                &:hover .image__infos {
+                    bottom: 10px;
+                }
+
+                .image__infos {
+                    display: flex;
+                    color: white;
+                    position: absolute;
+                    bottom: -15px;
+                    right: 10px;
+                    font-size: 13px;
+                    z-index: 100;
+                    transition: 0.3s ease-in-out;
+
+                    div {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+
+        .item__content {
+            padding: 65px 45px;
+            font-size: 15px;
+
+            @include md {
+                text-align: center;
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+
+            .job {
+                color: gainsboro;
+
+                button {
+                    cursor: pointer;
+                    border: none;
+                    background-color: transparent;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                &__field,
+                &__name {
+                    border-bottom: 1px solid gainsboro;
+                    color: var(--secondary-color);
+                }
+
+                &__working {
+                    color: $dark;
+                }
+            }
+
+            .description {
+                p:first-child {
+                    font-weight: 500;
+                    margin-top: 16px;
+                    margin-bottom: 8px;
+                    color: #616161;
+                    text-transform: uppercase;
+                    font-size: 23px;
+                }
+
+                p:last-child {
+                    line-height: 22px;
+                    color: #757575;
+                    margin: 0 0 10px;
+                }
+            }
+
+            .readMore {
+                a {
+                    color: var(--secondary-color);
+                    text-decoration: none;
+                    border-bottom: 1px solid gainsboro;
+                }
+            }
+        }
+    }
+}
+
+.flip {
+    transform: scale(-1);
+
+    @include md {
+        transform: unset;
+    }
+
+    .item__image,
+    .item__content {
+        transform: scale(-1);
+        text-align: right;
+
+        @include md {
+            transform: unset;
+            text-align: center;
+        }
+    }
+
+    .item__content {
+        padding-right: 45px;
+    }
+}
