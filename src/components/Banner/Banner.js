@@ -3,7 +3,6 @@ import Card from "./Card/Card"
 import { Link } from "react-scroll"
 import "./Banner.scss"
 import { graphql, useStaticQuery } from "gatsby"
-import ButtonScrollTop from "../ButtonScrollTop/Button"
 import Img from "gatsby-image"
 
 const Banner = () => {
@@ -97,7 +96,6 @@ const Banner = () => {
       <div className="header__background">
         <Img fluid={data.headerBackground.childImageSharp.fluid} />
       </div>
-      <ButtonScrollTop />
     </section>
   )
 }
