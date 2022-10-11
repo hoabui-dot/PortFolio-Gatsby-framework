@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import TitleSection from "../TitleSection/TitleSection"
 import FolderTree from "../FolderTree/FolderTree"
-import MoreInfoExp from "./MoreInfoExp/MoreInfoExp"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Experience = () => {
@@ -29,18 +28,14 @@ const Experience = () => {
   `)
   const expIcon = data.markdownRemark.frontmatter.expIcon.childImageSharp.fluid
 
-  const [state, setState] = useState(false)
-
   return (
     <section id="experience" className="experience">
       <div className="container">
         <TitleSection title="experience" image={expIcon} />
         <FolderTree
-          setState={setState}
           dataFolderTree={data.markdownRemark.frontmatter.experience}
           tree="exp"
         />
-        <MoreInfoExp state={state} setState={setState} />
       </div>
     </section>
   )

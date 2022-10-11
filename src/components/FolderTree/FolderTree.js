@@ -2,7 +2,7 @@ import React from "react"
 import EduBox from "./EduBox/EduBox"
 import "./FolderTree.scss"
 
-const FolderTree = ({ tree, dataFolderTree, setState }) => {
+const FolderTree = ({ tree, dataFolderTree }) => {
   let count = 0
   return (
     <>
@@ -12,12 +12,7 @@ const FolderTree = ({ tree, dataFolderTree, setState }) => {
           {dataFolderTree &&
             !!dataFolderTree &&
             dataFolderTree.map((data, index) => (
-              <EduBox
-                key={index}
-                setState={setState}
-                keyValue={count++}
-                data={data}
-              />
+              <EduBox key={index} keyValue={count++} data={data} />
             ))}
         </div>
       </div>
