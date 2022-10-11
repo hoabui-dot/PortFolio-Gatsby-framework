@@ -27,16 +27,28 @@
         }
 
         &--exp {
-            height: 350px;
+            height: 850px;
             top: unset;
             margin-top: 30px;
 
             @include desktop__big {
-                height: 450px;
+                height: 1050px;
             }
 
             @include md {
-                height: 600px;
+                height: 1300px;
+            }
+
+            @include custom__value(467px) {
+                height: 1450px;
+            }
+
+            @include custom__value(379px) {
+                height: 1600px;
+            }
+
+            @include custom__value(345px) {
+                height: 1800px;
             }
         }
 
@@ -49,6 +61,18 @@
 
             @include md {
                 height: 1000px;
+            }
+
+            @include custom__value(651px) {
+                height: 1200px;
+            }
+
+            @include custom__value(398px) {
+                height: 1450px;
+            }
+
+            @include custom__value(337px) {
+                height: 1500px;
             }
         }
     }

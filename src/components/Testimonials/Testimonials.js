@@ -11,7 +11,7 @@ import { faPinterest } from "@fortawesome/free-brands-svg-icons"
 
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query Testimonials {
       markdownRemark(frontmatter: { slug: { eq: "testimonial" } }) {
         frontmatter {
           client1 {
@@ -44,8 +44,16 @@ const Testimonials = () => {
     }
   `)
 
-  const { client1, client2, client3, author, desc1, desc2, desc3 } =
-    data.markdownRemark.frontmatter
+  const {
+    firstClient = data.markdownRemark.frontmatter.client1.childImageSharp.fluid,
+    senconClient = data.markdownRemark.frontmatter.client2.childImageSharp
+      .fluid,
+    thirdClient = data.markdownRemark.frontmatter.client3.childImageSharp.fluid,
+    author,
+    desc1,
+    desc2,
+    desc3,
+  } = data.markdownRemark.frontmatter
 
   return (
     <section id="testimonial" className="testimonial animated">
@@ -62,7 +70,7 @@ const Testimonials = () => {
             <SwiperSlide>
               <div className="item">
                 <figure className="item__image">
-                  <Img fluid={client1.childImageSharp.fluid} />
+                  <Img fluid={firstClient} />
                 </figure>
                 <div className="item__content">
                   <p>{desc1}</p>
@@ -73,7 +81,7 @@ const Testimonials = () => {
             <SwiperSlide>
               <div className="item">
                 <figure className="item__image">
-                  <Img fluid={client2.childImageSharp.fluid} />
+                  <Img fluid={senconClient} />
                 </figure>
                 <div className="item__content">
                   <p>{desc2}</p>
@@ -84,7 +92,7 @@ const Testimonials = () => {
             <SwiperSlide>
               <div className="item">
                 <figure className="item__image">
-                  <Img fluid={client3.childImageSharp.fluid} />
+                  <Img fluid={thirdClient} />
                 </figure>
                 <div className="item__content">
                   <p>{desc3}</p>

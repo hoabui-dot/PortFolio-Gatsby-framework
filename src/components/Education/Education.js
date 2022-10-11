@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import TitleSection from "../../TitleSection/TitleSection"
-import FolderTree from "../FolderTree"
+import TitleSection from "../TitleSection/TitleSection"
+import FolderTree from "../FolderTree/FolderTree"
 import MoreInfo from "./MoreInfo/MoreInfo"
 import { faReadme } from "@fortawesome/free-brands-svg-icons"
 import "./Education.scss"
@@ -13,7 +13,6 @@ const Education = () => {
         frontmatter {
           education {
             description
-            flip
             keyword
             school
             time

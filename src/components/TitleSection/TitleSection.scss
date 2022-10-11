@@ -25,5 +25,19 @@
             text-transform: uppercase;
             margin-bottom: 24px;
         }
+
+        .gatsby-image-wrapper {
+            width: 58px;
+            height: 58px;
+            color: #1abc9c;
+            @extend .box__shadow;
+            margin-bottom: 30px;
+
+            img {
+                padding: 13px;
+                width: 32px;
+                height: 32px;
+            }
+        }
     }
 }

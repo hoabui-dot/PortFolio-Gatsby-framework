@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react"
 import Banner from "../components/Banner/Banner"
 import Description from "../components/Description/Description"
-import Education from "../components/FolderTree/Education/Education"
+import Education from "../components/Education/Education"
+import Experience from "../components/Experience/Experience"
 import Testimonials from "../components/Testimonials/Testimonials"
 import Skills from "../components/Skills/Skills"
 import ColorPalate from "../components/ChangeColor/ChangeColor"
 import Blog from "../components/Blog/Blog"
+import Contact from "../components/Contact/Contact"
 import "../App.scss"
 
 const Home = () => {
-  const [isColor, setIsColor] = useState("green")
+  const [isColor, setIsColor] = useState("brown")
 
   useEffect(() => {
     let observer = new IntersectionObserver(
@@ -43,9 +45,11 @@ const Home = () => {
       <Description />
       <Education />
       <Skills />
+      <Experience />
       <Testimonials />
       <ColorPalate setIsColor={setIsColor} />
       <Blog />
+      <Contact />
     </div>
   )
 }

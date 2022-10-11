@@ -35,7 +35,7 @@
                 }
 
                 img {
-                    transition: 0.3s ease-in-out;
+                    transition: 0.3s ease-in-out !important;
                 }
 
                 &:hover .image__infos {
@@ -50,7 +50,7 @@
                     right: 10px;
                     font-size: 13px;
                     z-index: 100;
-                    transition: 0.3s ease-in-out;
+                    transition: 0.3s ease-in-out !important;
 
                     div {
                         margin-left: 5px;

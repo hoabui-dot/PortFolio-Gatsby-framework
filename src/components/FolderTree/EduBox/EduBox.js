@@ -3,12 +3,14 @@ import "./EduBox.scss"
 
 export const SetHeight = React.createContext()
 
-const EduBox = ({ eduData, flip, setState }) => {
-  const { title, description, time, keyword, school } = eduData
+const EduBox = ({ data, keyValue }) => {
+  const { title, description, time, keyword, school } = data
 
   return (
     <>
-      <div className={`eduBox__item ${flip}`}>
+      <div
+        className={`eduBox__item ${keyValue % 2 !== 0 ? "eduBox__flip" : ""}`}
+      >
         <div className="item__content">
           <div className="eduBox__job animated">
             <p className="job__name">{title}</p>

@@ -3,6 +3,7 @@ import EduBox from "./EduBox/EduBox"
 import "./FolderTree.scss"
 
 const FolderTree = ({ tree, dataFolderTree, setState }) => {
+  let count = 0
   return (
     <>
       <div className="container folderTree">
@@ -12,10 +13,10 @@ const FolderTree = ({ tree, dataFolderTree, setState }) => {
             !!dataFolderTree &&
             dataFolderTree.map((data, index) => (
               <EduBox
-                setState={setState}
                 key={index}
-                flip={data.flip}
-                eduData={data}
+                setState={setState}
+                keyValue={count++}
+                data={data}
               />
             ))}
         </div>
